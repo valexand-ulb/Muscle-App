@@ -1,0 +1,112 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="org.godotengine.muscleapp"
+4    android:installLocation="auto"
+5    android:versionCode="1"
+6    android:versionName="1.0" > <!-- glEsVersion is modified by the exporter, changing this value here has no effect. -->
+7    <uses-sdk
+8        android:minSdkVersion="19"
+9        android:targetSdkVersion="32" />
+10
+11    <supports-screens
+11-->D:\Documents\GodotEngine\Muscle_App\android\build\AndroidManifest.xml:12:5-16:40
+12        android:largeScreens="true"
+12-->D:\Documents\GodotEngine\Muscle_App\android\build\AndroidManifest.xml:15:9-36
+13        android:normalScreens="true"
+13-->D:\Documents\GodotEngine\Muscle_App\android\build\AndroidManifest.xml:14:9-37
+14        android:smallScreens="true"
+14-->D:\Documents\GodotEngine\Muscle_App\android\build\AndroidManifest.xml:13:9-36
+15        android:xlargeScreens="true" />
+15-->D:\Documents\GodotEngine\Muscle_App\android\build\AndroidManifest.xml:16:9-37
+16
+17    <uses-feature
+17-->D:\Documents\GodotEngine\Muscle_App\android\build\src\debug\AndroidManifest.xml:10:5-78
+18        android:glEsVersion="0x00030000"
+18-->D:\Documents\GodotEngine\Muscle_App\android\build\src\debug\AndroidManifest.xml:10:19-51
+19        android:required="true" />
+19-->D:\Documents\GodotEngine\Muscle_App\android\build\src\debug\AndroidManifest.xml:10:52-75
+20
+21    <application
+21-->D:\Documents\GodotEngine\Muscle_App\android\build\AndroidManifest.xml:30:5-94:19
+22        android:allowBackup="false"
+22-->D:\Documents\GodotEngine\Muscle_App\android\build\AndroidManifest.xml:30:68-95
+23        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+23-->[androidx.core:core:1.2.0] C:\Users\Vinovrski Alexandre\.gradle\caches\transforms-3\9617710e59968e2412aeb3b23f549743\transformed\core-1.2.0\AndroidManifest.xml:24:18-86
+24        android:debuggable="true"
+25        android:hasFragileUserData="false"
+25-->D:\Documents\GodotEngine\Muscle_App\android\build\AndroidManifest.xml:30:118-152
+26        android:icon="@mipmap/icon"
+26-->D:\Documents\GodotEngine\Muscle_App\android\build\AndroidManifest.xml:30:238-265
+27        android:isGame="true"
+27-->D:\Documents\GodotEngine\Muscle_App\android\build\AndroidManifest.xml:30:96-117
+28        android:label="@string/godot_project_name_string"
+28-->D:\Documents\GodotEngine\Muscle_App\android\build\AndroidManifest.xml:30:18-67
+29        android:requestLegacyExternalStorage="false" >
+29-->D:\Documents\GodotEngine\Muscle_App\android\build\AndroidManifest.xml:30:153-197
+30        <activity
+30-->D:\Documents\GodotEngine\Muscle_App\android\build\AndroidManifest.xml:65:9-88:20
+31            android:name="com.godot.game.GodotApp"
+31-->D:\Documents\GodotEngine\Muscle_App\android\build\AndroidManifest.xml:66:13-37
+32            android:configChanges="orientation|keyboardHidden|screenSize|smallestScreenSize|density|keyboard|navigation|screenLayout|uiMode"
+32-->D:\Documents\GodotEngine\Muscle_App\android\build\AndroidManifest.xml:73:13-141
+33            android:excludeFromRecents="false"
+33-->D:\Documents\GodotEngine\Muscle_App\android\build\AndroidManifest.xml:70:13-47
+34            android:exported="true"
+34-->D:\Documents\GodotEngine\Muscle_App\android\build\AndroidManifest.xml:71:13-36
+35            android:label="@string/godot_project_name_string"
+35-->D:\Documents\GodotEngine\Muscle_App\android\build\AndroidManifest.xml:67:13-62
+36            android:launchMode="singleTask"
+36-->D:\Documents\GodotEngine\Muscle_App\android\build\AndroidManifest.xml:69:13-44
+37            android:resizeableActivity="true"
+37-->D:\Documents\GodotEngine\Muscle_App\android\build\AndroidManifest.xml:74:13-47
+38            android:screenOrientation="portrait"
+38-->D:\Documents\GodotEngine\Muscle_App\android\build\AndroidManifest.xml:72:13-50
+39            android:theme="@style/GodotAppSplashTheme" >
+39-->D:\Documents\GodotEngine\Muscle_App\android\build\AndroidManifest.xml:68:13-55
+40            <intent-filter>
+40-->D:\Documents\GodotEngine\Muscle_App\android\build\AndroidManifest.xml:80:13-87:29
+41                <action android:name="android.intent.action.MAIN" />
+41-->D:\Documents\GodotEngine\Muscle_App\android\build\AndroidManifest.xml:81:17-69
+41-->D:\Documents\GodotEngine\Muscle_App\android\build\AndroidManifest.xml:81:25-66
+42
+43                <category android:name="android.intent.category.LAUNCHER" />
+43-->D:\Documents\GodotEngine\Muscle_App\android\build\AndroidManifest.xml:82:17-77
+43-->D:\Documents\GodotEngine\Muscle_App\android\build\AndroidManifest.xml:82:27-74
+44
+45                <!--
+46                Enable access to OpenXR on Oculus mobile devices, no-op on other Android
+47                platforms.
+48                -->
+49                <category android:name="com.oculus.intent.category.VR" />
+49-->D:\Documents\GodotEngine\Muscle_App\android\build\AndroidManifest.xml:86:17-74
+49-->D:\Documents\GodotEngine\Muscle_App\android\build\AndroidManifest.xml:86:27-71
+50            </intent-filter>
+51        </activity>
+52        <!-- Records the version of the Godot editor used for building -->
+53        <meta-data
+54            android:name="org.godotengine.editor.version"
+55            android:value="3.5.1.stable" /> <!-- Records the version of the Godot library -->
+56        <meta-data
+56-->[godot-lib.debug.aar] C:\Users\Vinovrski Alexandre\.gradle\caches\transforms-3\3cf521938b9d3a0415959e9fcf776bb2\transformed\jetified-godot-lib.debug\AndroidManifest.xml:13:9-15:44
+57            android:name="org.godotengine.library.version"
+57-->[godot-lib.debug.aar] C:\Users\Vinovrski Alexandre\.gradle\caches\transforms-3\3cf521938b9d3a0415959e9fcf776bb2\transformed\jetified-godot-lib.debug\AndroidManifest.xml:14:13-59
+58            android:value="3.5.1.stable" />
+58-->[godot-lib.debug.aar] C:\Users\Vinovrski Alexandre\.gradle\caches\transforms-3\3cf521938b9d3a0415959e9fcf776bb2\transformed\jetified-godot-lib.debug\AndroidManifest.xml:15:13-41
+59
+60        <service android:name="org.godotengine.godot.GodotDownloaderService" />
+60-->[godot-lib.debug.aar] C:\Users\Vinovrski Alexandre\.gradle\caches\transforms-3\3cf521938b9d3a0415959e9fcf776bb2\transformed\jetified-godot-lib.debug\AndroidManifest.xml:17:9-80
+60-->[godot-lib.debug.aar] C:\Users\Vinovrski Alexandre\.gradle\caches\transforms-3\3cf521938b9d3a0415959e9fcf776bb2\transformed\jetified-godot-lib.debug\AndroidManifest.xml:17:18-77
+61
+62        <activity
+62-->[godot-lib.debug.aar] C:\Users\Vinovrski Alexandre\.gradle\caches\transforms-3\3cf521938b9d3a0415959e9fcf776bb2\transformed\jetified-godot-lib.debug\AndroidManifest.xml:19:9-23:75
+63            android:name="org.godotengine.godot.utils.ProcessPhoenix"
+63-->[godot-lib.debug.aar] C:\Users\Vinovrski Alexandre\.gradle\caches\transforms-3\3cf521938b9d3a0415959e9fcf776bb2\transformed\jetified-godot-lib.debug\AndroidManifest.xml:20:13-70
+64            android:exported="false"
+64-->[godot-lib.debug.aar] C:\Users\Vinovrski Alexandre\.gradle\caches\transforms-3\3cf521938b9d3a0415959e9fcf776bb2\transformed\jetified-godot-lib.debug\AndroidManifest.xml:21:13-37
+65            android:process=":phoenix"
+65-->[godot-lib.debug.aar] C:\Users\Vinovrski Alexandre\.gradle\caches\transforms-3\3cf521938b9d3a0415959e9fcf776bb2\transformed\jetified-godot-lib.debug\AndroidManifest.xml:22:13-39
+66            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+66-->[godot-lib.debug.aar] C:\Users\Vinovrski Alexandre\.gradle\caches\transforms-3\3cf521938b9d3a0415959e9fcf776bb2\transformed\jetified-godot-lib.debug\AndroidManifest.xml:23:13-72
+67    </application>
+68
+69</manifest>
