@@ -1,12 +1,13 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://textures/Theme/font.tres" type="Theme" id=1]
+[ext_resource path="res://textures/Theme/Fonts_Themes/Oxygen_Regular_30.tres" type="Theme" id=1]
 [ext_resource path="res://textures/Images/test_figure.png" type="Texture" id=2]
-[ext_resource path="res://textures/Theme/font_30.tres" type="Theme" id=3]
+[ext_resource path="res://textures/Theme/Fonts_Themes/Oxygen_Regular_40.tres" type="Theme" id=3]
 
 [node name="Card" type="Control"]
 margin_right = 540.0
 margin_bottom = 1200.0
+rect_min_size = Vector2( 540, 1200 )
 mouse_filter = 1
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -17,19 +18,19 @@ anchor_bottom = 1.0
 
 [node name="Title" type="Label" parent="MainBox"]
 margin_right = 540.0
-margin_bottom = 62.0
+margin_bottom = 52.0
 size_flags_horizontal = 3
 size_flags_vertical = 1
-theme = ExtResource( 1 )
+theme = ExtResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "BlaBla"
 align = 1
 valign = 1
 
 [node name="Description" type="HBoxContainer" parent="MainBox"]
-margin_top = 66.0
+margin_top = 56.0
 margin_right = 540.0
-margin_bottom = 542.0
+margin_bottom = 532.0
 
 [node name="Image" type="TextureRect" parent="MainBox/Description"]
 margin_right = 268.0
@@ -43,14 +44,15 @@ texture = ExtResource( 2 )
 margin_left = 272.0
 margin_right = 540.0
 margin_bottom = 476.0
+mouse_filter = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme = ExtResource( 3 )
+theme = ExtResource( 1 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 text = "Beacoup de texte"
 
 [node name="GridContainer" type="GridContainer" parent="MainBox"]
-margin_top = 546.0
+margin_top = 536.0
 margin_right = 540.0
 margin_bottom = 1200.0
 size_flags_horizontal = 3
@@ -58,37 +60,37 @@ size_flags_vertical = 3
 columns = 2
 
 [node name="Repetition" type="Label" parent="MainBox/GridContainer"]
-margin_top = 131.0
+margin_top = 139.0
 margin_right = 268.0
-margin_bottom = 193.0
+margin_bottom = 191.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
-theme = ExtResource( 1 )
+theme = ExtResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Répétition :"
 
 [node name="OptionButton" type="OptionButton" parent="MainBox/GridContainer"]
 margin_left = 272.0
-margin_top = 152.0
+margin_top = 155.0
 margin_right = 540.0
-margin_bottom = 172.0
+margin_bottom = 175.0
 size_flags_horizontal = 3
 size_flags_vertical = 4
 
 [node name="Poids" type="Label" parent="MainBox/GridContainer"]
-margin_top = 460.0
+margin_top = 473.0
 margin_right = 268.0
-margin_bottom = 522.0
+margin_bottom = 525.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
-theme = ExtResource( 1 )
+theme = ExtResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Poids :"
 
 [node name="OptionButton2" type="OptionButton" parent="MainBox/GridContainer"]
 margin_left = 272.0
-margin_top = 481.0
+margin_top = 489.0
 margin_right = 540.0
-margin_bottom = 501.0
+margin_bottom = 509.0
 size_flags_horizontal = 3
 size_flags_vertical = 4
