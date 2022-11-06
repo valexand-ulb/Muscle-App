@@ -1,10 +1,11 @@
-[gd_resource type="Theme" load_steps=18 format=2]
+[gd_resource type="Theme" load_steps=20 format=2]
 
 [ext_resource path="res://textures/Fonts/Oxygen/Oxygen-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://textures/Themes/StyleBoxes/bggreyBE-ftwhiteF8.tres" type="StyleBox" id=2]
 [ext_resource path="res://textures/Themes/StyleBoxes/bggreyBE-ftwhiteF8-rc10.tres" type="StyleBox" id=3]
 [ext_resource path="res://textures/Themes/StyleBoxes/bgblue728-ftwhiteF8.tres" type="StyleBox" id=4]
 [ext_resource path="res://textures/Themes/StyleBoxes/bgblue728-ftwhiteF8-rc10.tres" type="StyleBox" id=5]
+[ext_resource path="res://textures/Themes/StyleBoxes/bgblue728-ftwhiteF8-brc10.tres" type="StyleBox" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 30
@@ -32,6 +33,10 @@ corner_radius_top_right = 10
 
 [sub_resource type="StyleBoxFlat" id=10]
 bg_color = Color( 0.972549, 0.972549, 1, 1 )
+
+[sub_resource type="DynamicFont" id=19]
+size = 20
+font_data = ExtResource( 1 )
 
 [sub_resource type="StyleBoxFlat" id=18]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
@@ -77,8 +82,10 @@ LineEdit/styles/normal = ExtResource( 4 )
 OptionButton/colors/font_color = Color( 0.972549, 0.972549, 1, 1 )
 OptionButton/styles/pressed = SubResource( 14 )
 Panel/styles/panel = SubResource( 10 )
+PopupMenu/colors/font_color = Color( 0.972549, 0.972549, 1, 1 )
+PopupMenu/fonts/font = SubResource( 19 )
 PopupMenu/styles/hover = SubResource( 18 )
-PopupMenu/styles/panel = ExtResource( 5 )
+PopupMenu/styles/panel = ExtResource( 6 )
 TabContainer/colors/font_color_bg = Color( 0.745098, 0.745098, 0.780392, 1 )
 TabContainer/colors/font_color_fg = Color( 0.447059, 0.537255, 0.956863, 1 )
 TabContainer/constants/hseparation = 0
