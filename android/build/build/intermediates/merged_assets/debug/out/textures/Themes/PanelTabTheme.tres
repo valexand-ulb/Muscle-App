@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=20 format=2]
+[gd_resource type="Theme" load_steps=29 format=2]
 
 [ext_resource path="res://textures/Fonts/Oxygen/Oxygen-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://textures/Themes/StyleBoxes/bggreyBE-ftwhiteF8.tres" type="StyleBox" id=2]
@@ -10,6 +10,14 @@
 [sub_resource type="DynamicFont" id=1]
 size = 30
 font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxEmpty" id=25]
+
+[sub_resource type="StyleBoxEmpty" id=26]
+
+[sub_resource type="StyleBoxEmpty" id=27]
+
+[sub_resource type="StyleBoxEmpty" id=28]
 
 [sub_resource type="DynamicFont" id=17]
 size = 30
@@ -66,6 +74,16 @@ corner_radius_top_right = 10
 size = 20
 font_data = ExtResource( 1 )
 
+[sub_resource type="StyleBoxEmpty" id=20]
+
+[sub_resource type="StyleBoxEmpty" id=21]
+
+[sub_resource type="StyleBoxEmpty" id=22]
+
+[sub_resource type="StyleBoxEmpty" id=23]
+
+[sub_resource type="StyleBoxEmpty" id=24]
+
 [resource]
 Button/colors/font_color = Color( 0.972549, 0.972549, 1, 1 )
 Button/constants/hseparation = 0
@@ -73,6 +91,11 @@ Button/fonts/font = SubResource( 1 )
 Button/styles/hover = ExtResource( 5 )
 Button/styles/normal = ExtResource( 5 )
 Button/styles/pressed = ExtResource( 3 )
+HScrollBar/styles/grabber = SubResource( 25 )
+HScrollBar/styles/grabber_highlight = SubResource( 26 )
+HScrollBar/styles/grabber_pressed = SubResource( 27 )
+HScrollBar/styles/scroll = SubResource( 28 )
+HScrollBar/styles/scroll_focus = null
 Label/colors/font_color = Color( 0.972549, 0.972549, 1, 1 )
 Label/fonts/font = SubResource( 17 )
 Label/styles/normal = SubResource( 16 )
@@ -86,6 +109,7 @@ PopupMenu/colors/font_color = Color( 0.972549, 0.972549, 1, 1 )
 PopupMenu/fonts/font = SubResource( 19 )
 PopupMenu/styles/hover = SubResource( 18 )
 PopupMenu/styles/panel = ExtResource( 6 )
+ScrollContainer/styles/bg = ExtResource( 2 )
 TabContainer/colors/font_color_bg = Color( 0.745098, 0.745098, 0.780392, 1 )
 TabContainer/colors/font_color_fg = Color( 0.447059, 0.537255, 0.956863, 1 )
 TabContainer/constants/hseparation = 0
@@ -105,3 +129,8 @@ TextEdit/colors/font_color_readonly = Color( 0.972549, 0.972549, 1, 1 )
 TextEdit/fonts/font = SubResource( 15 )
 TextEdit/styles/normal = ExtResource( 2 )
 TextEdit/styles/read_only = ExtResource( 2 )
+VScrollBar/styles/grabber = SubResource( 20 )
+VScrollBar/styles/grabber_highlight = SubResource( 21 )
+VScrollBar/styles/grabber_pressed = SubResource( 22 )
+VScrollBar/styles/scroll = SubResource( 23 )
+VScrollBar/styles/scroll_focus = SubResource( 24 )

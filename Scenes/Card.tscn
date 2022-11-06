@@ -9,10 +9,10 @@
 [node name="Card" type="Control"]
 margin_right = 720.0
 margin_bottom = 1200.0
-rect_min_size = Vector2( 540, 1200 )
+rect_min_size = Vector2( 540, 960 )
 mouse_filter = 1
-size_flags_horizontal = 3
-size_flags_vertical = 3
+size_flags_horizontal = 8
+size_flags_vertical = 8
 theme = ExtResource( 4 )
 script = ExtResource( 5 )
 
@@ -20,15 +20,13 @@ script = ExtResource( 5 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 
-[node name="Title" type="Label" parent="MainBox"]
+[node name="Exercice" type="OptionButton" parent="MainBox"]
 margin_right = 720.0
 margin_bottom = 52.0
 size_flags_horizontal = 3
-size_flags_vertical = 1
 theme = ExtResource( 3 )
 text = "BlaBla"
 align = 1
-valign = 1
 
 [node name="Description" type="HBoxContainer" parent="MainBox"]
 margin_top = 56.0
