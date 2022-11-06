@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=16 format=2]
+[gd_resource type="Theme" load_steps=19 format=2]
 
 [ext_resource path="res://textures/Fonts/Oxygen/Oxygen-Regular.ttf" type="DynamicFontData" id=1]
 
@@ -7,14 +7,14 @@ size = 30
 font_data = ExtResource( 1 )
 
 [sub_resource type="StyleBoxFlat" id=9]
-bg_color = Color( 0.247059, 0.247059, 0.247059, 1 )
+bg_color = Color( 0.447059, 0.537255, 0.956863, 1 )
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id=3]
-bg_color = Color( 0.247059, 0.247059, 0.247059, 1 )
+bg_color = Color( 0.447059, 0.537255, 0.956863, 1 )
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -27,19 +27,31 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
+[sub_resource type="DynamicFont" id=17]
+size = 30
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=16]
+bg_color = Color( 0.745098, 0.745098, 0.780392, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
 [sub_resource type="DynamicFont" id=11]
+size = 30
 font_data = ExtResource( 1 )
 
 [sub_resource type="StyleBoxFlat" id=12]
-bg_color = Color( 0.745098, 0.745098, 0.780392, 1 )
+bg_color = Color( 0.447059, 0.537255, 0.956863, 1 )
 
 [sub_resource type="StyleBoxFlat" id=14]
-bg_color = Color( 0.247059, 0.247059, 0.247059, 1 )
+bg_color = Color( 0.447059, 0.537255, 0.956863, 1 )
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 
 [sub_resource type="StyleBoxFlat" id=10]
-bg_color = Color( 0.890196, 0.890196, 0.890196, 1 )
+bg_color = Color( 0.972549, 0.972549, 1, 1 )
 
 [sub_resource type="DynamicFont" id=5]
 size = 30
@@ -52,7 +64,7 @@ shadow_size = 1
 shadow_offset = Vector2( 3, 3 )
 
 [sub_resource type="StyleBoxFlat" id=7]
-bg_color = Color( 0.247059, 0.247059, 0.247059, 1 )
+bg_color = Color( 0.447059, 0.537255, 0.956863, 1 )
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 
@@ -69,17 +81,27 @@ font_data = ExtResource( 1 )
 [sub_resource type="StyleBoxFlat" id=13]
 bg_color = Color( 0.745098, 0.745098, 0.780392, 1 )
 
+[sub_resource type="StyleBoxFlat" id=18]
+bg_color = Color( 0.745098, 0.745098, 0.780392, 1 )
+
 [resource]
+Button/colors/font_color = Color( 0.972549, 0.972549, 1, 1 )
 Button/constants/hseparation = 0
 Button/fonts/font = SubResource( 1 )
 Button/styles/hover = SubResource( 9 )
 Button/styles/normal = SubResource( 3 )
 Button/styles/pressed = SubResource( 4 )
-LineEdit/colors/font_color = Color( 1, 1, 1, 1 )
+Label/colors/font_color = Color( 0.972549, 0.972549, 1, 1 )
+Label/fonts/font = SubResource( 17 )
+Label/styles/normal = SubResource( 16 )
+LineEdit/colors/font_color = Color( 0.972549, 0.972549, 1, 1 )
 LineEdit/fonts/font = SubResource( 11 )
 LineEdit/styles/normal = SubResource( 12 )
+OptionButton/colors/font_color = Color( 0.972549, 0.972549, 1, 1 )
 OptionButton/styles/pressed = SubResource( 14 )
 Panel/styles/panel = SubResource( 10 )
+TabContainer/colors/font_color_bg = Color( 0.745098, 0.745098, 0.780392, 1 )
+TabContainer/colors/font_color_fg = Color( 0.972549, 0.972549, 1, 1 )
 TabContainer/constants/hseparation = 0
 TabContainer/constants/side_margin = 0
 TabContainer/fonts/font = SubResource( 5 )
@@ -92,6 +114,8 @@ TabContainer/icons/menu_highlight = null
 TabContainer/styles/panel = SubResource( 6 )
 TabContainer/styles/tab_bg = SubResource( 7 )
 TabContainer/styles/tab_fg = SubResource( 8 )
-TextEdit/colors/font_color = Color( 1, 1, 1, 1 )
+TextEdit/colors/font_color = Color( 0.972549, 0.972549, 1, 1 )
+TextEdit/colors/font_color_readonly = Color( 0.972549, 0.972549, 1, 1 )
 TextEdit/fonts/font = SubResource( 15 )
 TextEdit/styles/normal = SubResource( 13 )
+TextEdit/styles/read_only = SubResource( 18 )

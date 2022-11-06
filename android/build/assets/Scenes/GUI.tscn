@@ -15,7 +15,6 @@ script = ExtResource( 3 )
 [node name="TabContainer" type="TabContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_bottom = 14.0
 rect_min_size = Vector2( 720, 1600 )
 size_flags_vertical = 0
 tab_align = 0
@@ -46,11 +45,11 @@ size_flags_vertical = 6
 text = "Save"
 
 [node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Create"]
+anchor_left = 0.25
 anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 180.0
+anchor_bottom = 0.62
 margin_top = 1.0
-margin_bottom = -590.0
+margin_bottom = -0.619995
 mouse_filter = 1
 size_flags_horizontal = 3
 scroll_horizontal_enabled = false

@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://textures/Theme/Fonts_Themes/Oxygen_Regular_30.tres" type="Theme" id=1]
 [ext_resource path="res://textures/Images/test_figure.png" type="Texture" id=2]
 [ext_resource path="res://textures/Theme/Fonts_Themes/Oxygen_Regular_40.tres" type="Theme" id=3]
+[ext_resource path="res://textures/Theme/PanelTabTheme.tres" type="Theme" id=4]
+[ext_resource path="res://Scripts/Card.gd" type="Script" id=5]
 
 [node name="Card" type="Control"]
 margin_right = 720.0
@@ -11,6 +13,8 @@ rect_min_size = Vector2( 540, 1200 )
 mouse_filter = 1
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme = ExtResource( 4 )
+script = ExtResource( 5 )
 
 [node name="MainBox" type="VBoxContainer" parent="."]
 anchor_right = 1.0
@@ -22,7 +26,6 @@ margin_bottom = 52.0
 size_flags_horizontal = 3
 size_flags_vertical = 1
 theme = ExtResource( 3 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "BlaBla"
 align = 1
 valign = 1
@@ -40,7 +43,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 texture = ExtResource( 2 )
 
-[node name="RichTextLabel" type="RichTextLabel" parent="MainBox/Description"]
+[node name="TextEdit" type="TextEdit" parent="MainBox/Description"]
 margin_left = 362.0
 margin_right = 720.0
 margin_bottom = 476.0
@@ -48,8 +51,8 @@ mouse_filter = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource( 1 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
 text = "Beacoup de texte"
+readonly = true
 
 [node name="GridContainer" type="GridContainer" parent="MainBox"]
 margin_top = 536.0
@@ -66,14 +69,13 @@ margin_bottom = 191.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
 theme = ExtResource( 3 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Répétition :"
 
-[node name="OptionButton" type="OptionButton" parent="MainBox/GridContainer"]
+[node name="LineEditR" type="LineEdit" parent="MainBox/GridContainer"]
 margin_left = 362.0
-margin_top = 155.0
+margin_top = 145.0
 margin_right = 720.0
-margin_bottom = 175.0
+margin_bottom = 184.0
 size_flags_horizontal = 3
 size_flags_vertical = 4
 
@@ -84,13 +86,14 @@ margin_bottom = 525.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
 theme = ExtResource( 3 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Poids :"
 
-[node name="LineEdit" type="LineEdit" parent="MainBox/GridContainer"]
+[node name="OptionButtonW" type="OptionButton" parent="MainBox/GridContainer"]
 margin_left = 362.0
-margin_top = 487.0
+margin_top = 479.0
 margin_right = 720.0
-margin_bottom = 511.0
+margin_bottom = 518.0
 size_flags_horizontal = 3
 size_flags_vertical = 4
+
+[connection signal="child_entered_tree" from="." to="." method="_on_Card_child_entered_tree"]
