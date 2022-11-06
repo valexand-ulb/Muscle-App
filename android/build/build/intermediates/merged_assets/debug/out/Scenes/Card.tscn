@@ -71,7 +71,7 @@ size_flags_vertical = 6
 theme = ExtResource( 3 )
 text = "Répétition :"
 
-[node name="LineEditR" type="LineEdit" parent="MainBox/GridContainer"]
+[node name="LineEditR" type="SpinBox" parent="MainBox/GridContainer"]
 margin_left = 362.0
 margin_top = 145.0
 margin_right = 720.0
