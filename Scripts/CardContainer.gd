@@ -38,7 +38,6 @@ func _on_New_pressed():
 	var CardScene = load("res://Scenes/Card.tscn")
 	var _Card_instance = CardScene.instance()
 	add_child(_Card_instance)
-	connect("draw",_Card_instance,draw())
 	
 	# Si pas de bouton 'delete', ajoute en un
 	if not has_del_button:
@@ -46,9 +45,10 @@ func _on_New_pressed():
 		
 func _on_Delete_pressed():
 	var children_list = get_children()
+	var current_card : int = ceil(($"..".get_v_scroll() + ($"..".rect_size.y/2))/$"..".rect_size.y) - 1
 	if len(children_list) == 1:
 		_set_del_button_invisible()
-	get_children()[-1].free()
+	children_list[current_card].free()
 
 
 func _on_Save_pressed():
