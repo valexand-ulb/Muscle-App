@@ -1,6 +1,7 @@
 extends VBoxContainer
 
 var has_del_button : bool = 0
+var current_node
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -28,11 +29,16 @@ func _delete_all_children():
 	for child in get_children():
 		child.free()
 	_set_del_button_invisible()
+	
+func on_draw():
+	current_node = 0
+	
 
 func _on_New_pressed():
 	var CardScene = load("res://Scenes/Card.tscn")
 	var _Card_instance = CardScene.instance()
 	add_child(_Card_instance)
+	connect("draw",_Card_instance,draw())
 	
 	# Si pas de bouton 'delete', ajoute en un
 	if not has_del_button:
