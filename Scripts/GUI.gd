@@ -3,8 +3,12 @@ extends Control
 onready var tab_container = $TabContainer
 
 func _ready():
+	# bouton initials appuyé
 	$MarginContainer/HBoxContainer/Create.disabled = 1
+	
+	# boutons invisibles
 	$TabContainer/Create/ButtonBox/Delete.visible = 0
+	$TabContainer/Create/ButtonBox/Save.visible = 0
 
 func _enable_other_button(idx : int):
 	var button_names = ["Create", "Timing", "Trainings", "Graph"]
