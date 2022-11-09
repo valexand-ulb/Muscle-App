@@ -54,5 +54,23 @@ func _on_Save_pressed():
 	# TODO : effectue une sauvegarde des informations
 	_delete_all_children()
 
-func _on_ScrollContainer_scroll_started():
-	pass
+func _on_ScrollContainer_scroll_ended():
+	if !has_del_button:
+		return
+	
+	var scrollcont = $".."
+	var children_list = get_children()
+	var current_card : float = ceil((scrollcont.get_v_scroll() + (scrollcont.rect_size.y/2))/scrollcont.rect_size.y) - 1
+	var prec_card : float = current_card - 1.0
+	
+	var center : Vector2 = scrollcont.get_global_rect().get_center()
+	var c1 : Vector2  = children_list[prec_card].get_global_rect().get_center() if prec_card != -1 else Vector2(0,-1000)
+	var c2 : Vector2 = children_list[current_card].get_global_rect().get_center()
+	
+	var d1 : float = abs(center.y-c1.y)
+	var d2 : float = abs(center.y-c2.y)
+	
+	if d1 <= d2: # snap to prev_card
+		print(scrollcont.get_v_scroll()+d1)
+	else:
+		print(scrollcont.get_v_scroll()-d2)

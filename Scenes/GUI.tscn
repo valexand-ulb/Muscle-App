@@ -157,7 +157,7 @@ icon = ExtResource( 5 )
 [connection signal="pressed" from="TabContainer/Create/ButtonBox/New" to="TabContainer/Create/ScrollContainer/VBoxContainer" method="_on_New_pressed"]
 [connection signal="pressed" from="TabContainer/Create/ButtonBox/Delete" to="TabContainer/Create/ScrollContainer/VBoxContainer" method="_on_Delete_pressed"]
 [connection signal="pressed" from="TabContainer/Create/ButtonBox/Save" to="TabContainer/Create/ScrollContainer/VBoxContainer" method="_on_Save_pressed"]
-[connection signal="scroll_started" from="TabContainer/Create/ScrollContainer" to="TabContainer/Create/ScrollContainer/VBoxContainer" method="_on_ScrollContainer_scroll_started"]
+[connection signal="scroll_ended" from="TabContainer/Create/ScrollContainer" to="TabContainer/Create/ScrollContainer/VBoxContainer" method="_on_ScrollContainer_scroll_ended"]
 [connection signal="button_up" from="MarginContainer/HBoxContainer/Create" to="." method="_on_Create_button_up"]
 [connection signal="button_up" from="MarginContainer/HBoxContainer/Timing" to="." method="_on_Timing_button_up"]
 [connection signal="button_up" from="MarginContainer/HBoxContainer/Trainings" to="." method="_on_Trainings_button_up"]
