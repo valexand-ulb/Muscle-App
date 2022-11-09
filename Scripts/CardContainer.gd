@@ -1,6 +1,7 @@
 extends VBoxContainer
 
 var has_del_button : bool = 0
+var n_of_card  : int = 0
 var current_node
 
 # Declare member variables here. Examples:
@@ -40,7 +41,8 @@ func _on_New_pressed():
 	# Si pas de bouton 'delete', ajoute en un
 	if not has_del_button:
 		_set_del_button_visible()
-		
+	n_of_card +=1
+	
 func _on_Delete_pressed():
 	var scrollcont = $".."
 	var children_list = get_children()
@@ -48,13 +50,18 @@ func _on_Delete_pressed():
 	if len(children_list) == 1:
 		_set_del_button_invisible()
 	children_list[current_card].free()
+	n_of_card =-1
 
 
 func _on_Save_pressed():
 	# TODO : effectue une sauvegarde des informations
 	_delete_all_children()
 
-func _on_ScrollContainer_scroll_ended():
+
+func _on_ScrollContainer_gui_input(event):
+	if not event.is_action_released("ui_touch"):
+		return
+	
 	if !has_del_button:
 		return
 	
@@ -67,10 +74,18 @@ func _on_ScrollContainer_scroll_ended():
 	var c1 : Vector2  = children_list[prec_card].get_global_rect().get_center() if prec_card != -1 else Vector2(0,-1000)
 	var c2 : Vector2 = children_list[current_card].get_global_rect().get_center()
 	
-	var d1 : float = abs(center.y-c1.y)
-	var d2 : float = abs(center.y-c2.y)
+	var d1 : float = center.y-c1.y
+	var d2 : float = center.y-c2.y
 	
 	if d1 <= d2: # snap to prev_card
-		print(scrollcont.get_v_scroll()+d1)
+		#print(scrollcont.rect_size.y * prec_card)
+		scrollcont.set_v_scroll(scrollcont.rect_size.y * prec_card)
+
 	else:
-		print(scrollcont.get_v_scroll()-d2)
+		#print(scrollcont.rect_size.y * current_card)
+		scrollcont.set_v_scroll(scrollcont.rect_size.y * current_card)
+
+	
+	
+	
+	
