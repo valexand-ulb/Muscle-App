@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://textures/Themes/Fonts_Themes/Oxygen_Regular_30.tres" type="Theme" id=1]
-[ext_resource path="res://textures/Images/test_figure.png" type="Texture" id=2]
-[ext_resource path="res://textures/Themes/Fonts_Themes/Oxygen_Regular_40.tres" type="Theme" id=3]
-[ext_resource path="res://textures/Themes/PanelTabTheme.tres" type="Theme" id=4]
+[ext_resource path="res://Textures/Themes/Fonts_Themes/Oxygen_Regular_30.tres" type="Theme" id=1]
+[ext_resource path="res://Textures/Images/test_figure.png" type="Texture" id=2]
+[ext_resource path="res://Textures/Themes/Fonts_Themes/Oxygen_Regular_40.tres" type="Theme" id=3]
+[ext_resource path="res://Textures/Themes/PanelTabTheme.tres" type="Theme" id=4]
 [ext_resource path="res://Scripts/Card.gd" type="Script" id=5]
 
 [node name="Card" type="Control"]

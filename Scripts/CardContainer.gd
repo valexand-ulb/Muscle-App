@@ -1,12 +1,26 @@
 extends VBoxContainer
 
+var save_path = "res://Saves/save.dat"
 var has_del_button : bool = 0
 var has_save_button : bool = 0
 var n_of_card  : int = 0
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+func _fetch_and_save_all_data(save_name : String):
+	var save_dict : Dictionary = {}
+	for card in get_children():
+		save_dict[save_name] ={
+				"ex" : card.get_exercice(),
+				"rep": card.get_rep(),
+				"weight": card.get_weight()
+			}
+	
+	var file = File.new()
+
+	if file.open(save_path, File.WRITE) == OK:
+		file.store_var(save_dict)
+		file.close()
+	
+	
 
 func _set_buttons_visible():
 	$"../../ButtonBox/Delete".visible=1
@@ -28,9 +42,6 @@ func _delete_all_children():
 func _modif_label_count():
 	# Modification du label
 	$"../../CountLabel".text = "Count : " + str(n_of_card)
-
-func _modif_label_id(card_id : int):
-	$"../../IdLabel".text = "Id : " + str(card_id)
 	
 func _on_New_pressed():
 	var CardScene = load("res://Scenes/Card.tscn")
@@ -57,6 +68,8 @@ func _on_Delete_pressed():
 
 func _on_Save_pressed():
 	# TODO : effectue une sauvegarde des informations
+	_fetch_and_save_all_data('test')
+	
 	_delete_all_children()
 	
 	n_of_card = 0

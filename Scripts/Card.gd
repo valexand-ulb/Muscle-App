@@ -13,6 +13,14 @@ var y_size : int  = get_rect().size.y
 func _ready():
 	pass # Replace with function body.
 
+func get_exercice():
+	return $MainBox/Exercice.get_item_text($MainBox/Exercice.get_selected_id())
+
+func get_rep():
+	return $MainBox/GridContainer/LineEditR.get_line_edit().get_text()
+	
+func get_weight():
+	return $MainBox/GridContainer/OptionButtonW.get_item_text($MainBox/GridContainer/OptionButtonW.get_selected_id())
 
 func _add_dropdown_items_weight():
 	$MainBox/GridContainer/OptionButtonW.add_item("None")
