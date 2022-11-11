@@ -3,20 +3,10 @@ extends VBoxContainer
 var has_del_button : bool = 0
 var has_save_button : bool = 0
 var n_of_card  : int = 0
-var current_node
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
 
 func _set_buttons_visible():
 	$"../../ButtonBox/Delete".visible=1
@@ -35,8 +25,12 @@ func _delete_all_children():
 		child.free()
 	_set_buttons_invisible()
 	
-func on_draw():
-	current_node = 0
+func _modif_label_count():
+	# Modification du label
+	$"../../CountLabel".text = "Count : " + str(n_of_card)
+
+func _modif_label_id(card_id : int):
+	$"../../IdLabel".text = "Id : " + str(card_id)
 	
 func _on_New_pressed():
 	var CardScene = load("res://Scenes/Card.tscn")
@@ -46,7 +40,9 @@ func _on_New_pressed():
 	# Si pas de bouton 'delete', ajoute en un
 	if not has_del_button:
 		_set_buttons_visible()
+		
 	n_of_card +=1
+	_modif_label_count()
 	
 func _on_Delete_pressed():
 	var scrollcont = $".."
@@ -55,13 +51,16 @@ func _on_Delete_pressed():
 	if len(children_list) == 1:
 		_set_buttons_invisible()
 	children_list[current_card].free()
-	n_of_card =-1
-
+	
+	n_of_card -= 1
+	_modif_label_count()
 
 func _on_Save_pressed():
 	# TODO : effectue une sauvegarde des informations
 	_delete_all_children()
-
+	
+	n_of_card = 0
+	_modif_label_count()
 
 func _on_ScrollContainer_gui_input(event):
 	if not event.is_action_released("ui_touch"):
@@ -71,15 +70,6 @@ func _on_ScrollContainer_gui_input(event):
 		return
 	
 	var scrollcont = $".."
-	var vboxcont =	$"."
 	var current_card : float = ceil((scrollcont.get_v_scroll() + (scrollcont.rect_size.y/2))/scrollcont.rect_size.y) - 1
 	
-	print("+++++++++++")
-	print(scrollcont.get_v_scroll())
-	print(str(int(current_card)) + " * ")
-	print(str(scrollcont.rect_size.y) + " = ")
-	print(scrollcont.rect_size.y * int(current_card))
-	
 	scrollcont.set_v_scroll(scrollcont.rect_size.y * int(current_card))
-	print("but v_scroll : " + str(scrollcont.get_v_scroll()))
-	print("but card_size : " + str(vboxcont.get_child(current_card).get_rect().size.y))

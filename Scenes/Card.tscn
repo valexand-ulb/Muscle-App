@@ -11,8 +11,6 @@ margin_right = 540.0
 margin_bottom = 960.0
 rect_min_size = Vector2( 540, 960 )
 mouse_filter = 1
-size_flags_horizontal = 8
-size_flags_vertical = 8
 theme = ExtResource( 4 )
 script = ExtResource( 5 )
 
