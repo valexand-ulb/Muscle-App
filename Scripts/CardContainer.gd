@@ -71,23 +71,15 @@ func _on_ScrollContainer_gui_input(event):
 		return
 	
 	var scrollcont = $".."
-	var children_list = get_children()
+	var vboxcont =	$"."
 	var current_card : float = ceil((scrollcont.get_v_scroll() + (scrollcont.rect_size.y/2))/scrollcont.rect_size.y) - 1
-	var prec_card : float = current_card - 1.0
 	
-	var center : Vector2 = scrollcont.get_global_rect().get_center()
-	var c1 : Vector2  = children_list[prec_card].get_global_rect().get_center() if prec_card != -1 else Vector2(0,-1000)
-	var c2 : Vector2 = children_list[current_card].get_global_rect().get_center()
+	print("+++++++++++")
+	print(scrollcont.get_v_scroll())
+	print(str(int(current_card)) + " * ")
+	print(str(scrollcont.rect_size.y) + " = ")
+	print(scrollcont.rect_size.y * int(current_card))
 	
-	var d1 : float = center.y-c1.y
-	var d2 : float = center.y-c2.y
-	
-	if d1 <= d2: # snap to prev_card
-		scrollcont.set_v_scroll(scrollcont.rect_size.y * prec_card)
-	else:
-		scrollcont.set_v_scroll(scrollcont.rect_size.y * current_card)
-
-	
-	
-	
-	
+	scrollcont.set_v_scroll(scrollcont.rect_size.y * int(current_card))
+	print("but v_scroll : " + str(scrollcont.get_v_scroll()))
+	print("but card_size : " + str(vboxcont.get_child(current_card).get_rect().size.y))

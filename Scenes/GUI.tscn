@@ -68,18 +68,22 @@ text = "Save"
 icon = ExtResource( 8 )
 
 [node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Create"]
-anchor_left = 0.569
-anchor_right = 0.569
-margin_left = -269.68
-margin_top = 30.0
-margin_right = 270.32
-margin_bottom = 990.0
+anchor_left = 0.194444
+anchor_top = 0.01875
+anchor_right = 0.944444
+anchor_bottom = 0.61875
+margin_bottom = 6.10352e-05
+rect_min_size = Vector2( 540, 960 )
 mouse_filter = 1
 size_flags_horizontal = 3
 custom_styles/bg = SubResource( 1 )
 scroll_horizontal_enabled = false
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Create/ScrollContainer"]
+custom_constants/separation = 0
 script = ExtResource( 4 )
 
 [node name="Timing" type="Tabs" parent="TabContainer"]

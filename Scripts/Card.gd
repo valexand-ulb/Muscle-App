@@ -2,6 +2,7 @@ extends Control
  
 var weight : int = 30
 var exercices = ["Exercice 1","Exercice 2","Exercice 3","Exercice 4"]
+var y_size : int  = get_rect().size.y
 
 # Declare member variables here. Examples:
 # var a = 2
