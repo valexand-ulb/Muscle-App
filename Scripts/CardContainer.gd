@@ -67,7 +67,7 @@ func _on_Delete_pressed():
 	_modif_label_count()
 
 func _on_Save_pressed():
-	# TODO : effectue une sauvegarde des informations
+	$"../../PopUpSave".visible = 1
 	_fetch_and_save_all_data('test')
 	
 	_delete_all_children()
