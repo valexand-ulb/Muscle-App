@@ -9,6 +9,7 @@ size = 20
 font_data = ExtResource( 2 )
 
 [node name="Control" type="WindowDialog"]
+visible = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = 750.0
@@ -31,8 +32,8 @@ margin_right = 710.0
 margin_bottom = 190.0
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
-margin_top = 18.0
-margin_right = 188.0
+margin_top = 21.0
+margin_right = 200.0
 margin_bottom = 47.0
 size_flags_horizontal = 2
 size_flags_vertical = 6
@@ -40,7 +41,7 @@ custom_fonts/font = SubResource( 1 )
 text = "Name of SaveState :"
 
 [node name="LineEdit" type="LineEdit" parent="MarginContainer/VBoxContainer"]
-margin_top = 69.0
+margin_top = 72.0
 margin_right = 700.0
 margin_bottom = 124.0
 
