@@ -1,14 +1,23 @@
 extends Control
 
-onready var tab_container = $TabContainer
+# tabs & tab_container
+onready var tab_container = get_node("TabContainer")
+onready var create_tab = get_node("MarginContainer/HBoxContainer/Create")
+onready var timing_tab = get_node("MarginContainer/HBoxContainer/Timing")
+onready var trainings_tab = get_node("MarginContainer/HBoxContainer/Trainings")
+onready var graph_tab = get_node("MarginContainer/HBoxContainer/Graph")
+
+# buttons save & delete
+onready var delete_button = get_node("TabContainer/Create/ButtonBox/Delete")
+onready var save_button = get_node("TabContainer/Create/ButtonBox/Save")
 
 func _ready():
 	# bouton initials appuyé
-	$MarginContainer/HBoxContainer/Create.disabled = 1
+	create_tab.disabled = 1
 	
 	# boutons invisibles
-	$TabContainer/Create/ButtonBox/Delete.visible = 0
-	$TabContainer/Create/ButtonBox/Save.visible = 0
+	delete_button.visible = 0
+	save_button.visible = 0
 
 func _enable_other_button(idx : int):
 	var button_names = ["Create", "Timing", "Trainings", "Graph"]
@@ -18,23 +27,23 @@ func _enable_other_button(idx : int):
 
 func _on_Create_button_up():
 	tab_container.current_tab = 0
-	$MarginContainer/HBoxContainer/Create.disabled = 1
+	create_tab.disabled = 1
 	_enable_other_button(0)
 
 
 func _on_Timing_button_up():
 	tab_container.current_tab = 1
-	$MarginContainer/HBoxContainer/Timing.disabled = 1
+	timing_tab.disabled = 1
 	_enable_other_button(1)
 
 
 func _on_Trainings_button_up():
 	tab_container.current_tab = 2
-	$MarginContainer/HBoxContainer/Trainings.disabled = 1
+	trainings_tab.disabled = 1
 	_enable_other_button(2)
 
 
 func _on_Graph_button_up():
 	tab_container.current_tab = 3
-	$MarginContainer/HBoxContainer/Graph.disabled = 1
+	graph_tab.disabled = 1
 	_enable_other_button(3)

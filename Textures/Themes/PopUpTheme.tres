@@ -1,0 +1,30 @@
+[gd_resource type="Theme" load_steps=6 format=2]
+
+[ext_resource path="res://Textures/Fonts/Oxygen/Oxygen-Regular.ttf" type="DynamicFontData" id=1]
+
+[sub_resource type="DynamicFont" id=5]
+size = 40
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxEmpty" id=6]
+
+[sub_resource type="DynamicFont" id=3]
+size = 40
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 40
+font_data = ExtResource( 1 )
+
+[resource]
+Button/fonts/font = SubResource( 5 )
+Button/styles/focus = SubResource( 6 )
+Button/styles/hover = null
+Button/styles/normal = null
+Button/styles/pressed = null
+Label/fonts/font = SubResource( 3 )
+Label/styles/normal = null
+LineEdit/fonts/font = SubResource( 4 )
+LineEdit/styles/focus = null
+LineEdit/styles/normal = null
+WindowDialog/styles/panel = null

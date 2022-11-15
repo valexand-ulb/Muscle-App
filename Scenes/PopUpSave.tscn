@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://textures/Themes/PopUpTheme.tres" type="Theme" id=1]
+[ext_resource path="res://Textures/Themes/PopUpTheme.tres" type="Theme" id=1]
 [ext_resource path="res://Textures/Fonts/Oxygen/Oxygen-Regular.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Scripts/PopUpSave.gd" type="Script" id=3]
 
@@ -50,4 +50,4 @@ margin_right = 700.0
 margin_bottom = 180.0
 text = "Save"
 
-[connection signal="text_entered" from="MarginContainer/VBoxContainer/LineEdit" to="." method="_on_LineEdit_text_entered"]
+[connection signal="text_changed" from="MarginContainer/VBoxContainer/LineEdit" to="." method="_on_LineEdit_text_changed"]

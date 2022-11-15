@@ -11,6 +11,8 @@ margin_right = 540.0
 margin_bottom = 960.0
 rect_min_size = Vector2( 540, 960 )
 mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme = ExtResource( 4 )
 script = ExtResource( 5 )
 
@@ -22,16 +24,16 @@ size_flags_vertical = 3
 
 [node name="Exercice" type="OptionButton" parent="MainBox"]
 margin_right = 540.0
-margin_bottom = 52.0
+margin_bottom = 12.0
 size_flags_horizontal = 3
 theme = ExtResource( 3 )
 text = "BlaBla"
 align = 1
 
 [node name="Description" type="HBoxContainer" parent="MainBox"]
-margin_top = 56.0
+margin_top = 16.0
 margin_right = 540.0
-margin_bottom = 532.0
+margin_bottom = 492.0
 
 [node name="Image" type="TextureRect" parent="MainBox/Description"]
 margin_right = 268.0
@@ -53,7 +55,7 @@ text = "Beacoup de texte"
 readonly = true
 
 [node name="GridContainer" type="GridContainer" parent="MainBox"]
-margin_top = 536.0
+margin_top = 496.0
 margin_right = 540.0
 margin_bottom = 960.0
 size_flags_horizontal = 3
@@ -61,9 +63,9 @@ size_flags_vertical = 3
 columns = 2
 
 [node name="Repetition" type="Label" parent="MainBox/GridContainer"]
-margin_top = 79.0
+margin_top = 114.0
 margin_right = 268.0
-margin_bottom = 131.0
+margin_bottom = 116.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
 theme = ExtResource( 3 )
@@ -71,16 +73,16 @@ text = "Répétition :"
 
 [node name="LineEditR" type="SpinBox" parent="MainBox/GridContainer"]
 margin_left = 440.0
-margin_top = 85.0
+margin_top = 95.0
 margin_right = 540.0
-margin_bottom = 124.0
+margin_bottom = 134.0
 size_flags_horizontal = 12
 size_flags_vertical = 4
 
 [node name="Poids" type="Label" parent="MainBox/GridContainer"]
-margin_top = 293.0
+margin_top = 348.0
 margin_right = 268.0
-margin_bottom = 345.0
+margin_bottom = 350.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
 theme = ExtResource( 3 )
@@ -88,9 +90,9 @@ text = "Poids :"
 
 [node name="OptionButtonW" type="OptionButton" parent="MainBox/GridContainer"]
 margin_left = 272.0
-margin_top = 299.0
+margin_top = 329.0
 margin_right = 540.0
-margin_bottom = 338.0
+margin_bottom = 368.0
 size_flags_horizontal = 3
 size_flags_vertical = 4
 

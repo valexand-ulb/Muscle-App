@@ -4,23 +4,22 @@ var weight : int = 30
 var exercices = ["Exercice 1","Exercice 2","Exercice 3","Exercice 4"]
 var y_size : int  = get_rect().size.y
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
+onready var exercice_dropbox = get_node("MainBox/Exercice")
+onready var rep_line_edit = get_node("MainBox/GridContainer/LineEditR")
+onready var option_button_weight = get_node("MainBox/GridContainer/OptionButtonW")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
 
 func get_exercice():
-	return $MainBox/Exercice.get_item_text($MainBox/Exercice.get_selected_id())
+	return exercice_dropbox.get_item_text(exercice_dropbox.get_selected_id())
 
 func get_rep():
-	return $MainBox/GridContainer/LineEditR.get_line_edit().get_text()
+	return rep_line_edit.get_line_edit().get_text()
 	
 func get_weight():
-	return $MainBox/GridContainer/OptionButtonW.get_item_text($MainBox/GridContainer/OptionButtonW.get_selected_id())
+	return option_button_weight.get_item_text(option_button_weight.get_selected_id())
 
 func _add_dropdown_items_weight():
 	$MainBox/GridContainer/OptionButtonW.add_item("None")
