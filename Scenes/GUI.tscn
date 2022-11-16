@@ -100,6 +100,7 @@ text = "Count : 0"
 [node name="PopUpSave" parent="TabContainer/Create" instance=ExtResource( 11 )]
 margin_top = 600.0
 margin_bottom = -600.0
+vbox_node = ""
 
 [node name="Timing" type="Panel" parent="TabContainer"]
 visible = false

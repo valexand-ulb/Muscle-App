@@ -1,6 +1,6 @@
 extends VBoxContainer
 
-var save_path = "res://Saves/save.dat"
+var save_path = "res://Saves/"
 var has_del_button : bool = 0
 var has_save_button : bool = 0
 var n_of_card  : int = 0
@@ -19,7 +19,7 @@ onready var scroll_container = get_node("..")
 # count label
 onready var count_label = get_node("../../CountLabel")
 
-func _fetch_and_save_all_data(save_name : String):
+func fetch_and_save_all_data(save_name : String):
 	var save_dict : Dictionary = {}
 	var cards_dict : Dictionary = {}
 	var card_name : String = "card_"
@@ -34,14 +34,18 @@ func _fetch_and_save_all_data(save_name : String):
 		card_count += 1
 
 	save_dict[save_name] ={
-			"card": cards_dict
+			"cards": cards_dict
 	}
 
 	var file = File.new()
-	print(save_dict)
-	if file.open(save_path, File.WRITE) == OK:
+
+	if file.open(save_path + save_name + ".dat", File.WRITE) == OK:
 		file.store_var(save_dict)
 		file.close()
+	
+	_delete_all_children()
+	modif_label_count()
+	popup_window.visible=0
 
 func _set_buttons_visible():
 	delete_button.visible=1
@@ -60,7 +64,7 @@ func _delete_all_children():
 		child.free()
 	_set_buttons_invisible()
 	
-func _modif_label_count():
+func modif_label_count():
 	# Modification du label
 	count_label.text = "Count : " + str(n_of_card)
 	
@@ -74,7 +78,7 @@ func _on_New_pressed():
 		_set_buttons_visible()
 		
 	n_of_card +=1
-	_modif_label_count()
+	modif_label_count()
 	
 func _on_Delete_pressed():
 	var children_list = get_children()
@@ -84,16 +88,16 @@ func _on_Delete_pressed():
 	children_list[current_card].free()
 	
 	n_of_card -= 1
-	_modif_label_count()
+	modif_label_count()
 
 func _on_Save_pressed():
 	popup_window.visible = 1
-	_fetch_and_save_all_data('test')
+	#_fetch_and_save_all_data('test')
 	
-	_delete_all_children()
+	#_delete_all_children()
 	
 	n_of_card = 0
-	_modif_label_count()
+	#_modif_label_count()
 
 func _on_ScrollContainer_gui_input(event):
 	if not event.is_action_released("ui_touch"):

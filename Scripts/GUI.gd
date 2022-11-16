@@ -11,6 +11,9 @@ onready var graph_tab = get_node("MarginContainer/HBoxContainer/Graph")
 onready var delete_button = get_node("TabContainer/Create/ButtonBox/Delete")
 onready var save_button = get_node("TabContainer/Create/ButtonBox/Save")
 
+# popup
+onready var popup_window = get_node("TabContainer/Create/PopUpSave")
+
 func _ready():
 	# bouton initials appuyé
 	create_tab.disabled = 1
@@ -18,6 +21,9 @@ func _ready():
 	# boutons invisibles
 	delete_button.visible = 0
 	save_button.visible = 0
+	
+	# connect vbox to popup
+	popup_window.vbox_node = get_node("TabContainer/Create/ScrollContainer/VBoxContainer")
 
 func _enable_other_button(idx : int):
 	var button_names = ["Create", "Timing", "Trainings", "Graph"]
