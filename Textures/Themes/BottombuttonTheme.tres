@@ -1,23 +1,28 @@
-[gd_resource type="Theme" load_steps=6 format=2]
+[gd_resource type="Theme" load_steps=7 format=2]
 
-[ext_resource path="res://Textures/Themes/StyleBoxes/bgblue728-ftwhiteF8-rc10.tres" type="StyleBox" id=1]
+[ext_resource path="res://Textures/Themes/StyleBoxes/bot_button_grey_rc.tres" type="StyleBox" id=1]
 [ext_resource path="res://Textures/Fonts/Oxygen/Oxygen-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Textures/Themes/StyleBoxes/bot_button_pressed_greyd_rc.tres" type="StyleBox" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 30
 font_data = ExtResource( 2 )
 
-[sub_resource type="StyleBoxEmpty" id=2]
+[sub_resource type="StyleBoxEmpty" id=4]
+content_margin_left = 5.0
+content_margin_right = 5.0
 
 [sub_resource type="StyleBoxEmpty" id=3]
 
 [resource]
-Button/colors/font_color = Color( 0.745098, 0.745098, 0.780392, 1 )
-Button/colors/font_color_disabled = Color( 0.745098, 0.745098, 0.780392, 1 )
-Button/colors/font_color_hover = Color( 0.745098, 0.745098, 0.780392, 1 )
+Button/colors/font_color = Color( 0.972549, 0.972549, 1, 1 )
+Button/colors/font_color_disabled = Color( 0.972549, 0.972549, 1, 1 )
+Button/colors/font_color_hover = Color( 0.972549, 0.972549, 1, 1 )
+Button/colors/font_color_pressed = Color( 0.972549, 0.972549, 1, 1 )
 Button/fonts/font = SubResource( 1 )
-Button/styles/disabled = SubResource( 2 )
+Button/styles/disabled = SubResource( 4 )
 Button/styles/focus = SubResource( 3 )
 Button/styles/hover = ExtResource( 1 )
 Button/styles/normal = ExtResource( 1 )
-Button/styles/pressed = ExtResource( 1 )
+Button/styles/pressed = ExtResource( 3 )
+HBoxContainer/constants/separation = 0

@@ -1,33 +1,47 @@
-[gd_resource type="Theme" load_steps=7 format=2]
+[gd_resource type="Theme" load_steps=11 format=2]
 
 [ext_resource path="res://Textures/Fonts/Oxygen/Oxygen-Regular.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://Textures/Themes/StyleBoxes/bgblue728-ftwhiteF8-rc10.tres" type="StyleBox" id=2]
-[ext_resource path="res://Textures/Themes/StyleBoxes/bggreyBE-ftwhiteF8-rc10.tres" type="StyleBox" id=3]
+[ext_resource path="res://Textures/Themes/StyleBoxes/bot_button_pressed_greyd_rc.tres" type="StyleBox" id=2]
+[ext_resource path="res://Textures/Themes/StyleBoxes/button_green_rc.tres" type="StyleBox" id=3]
+[ext_resource path="res://Textures/Themes/StyleBoxes/button_clicked_green.tres" type="StyleBox" id=4]
 
 [sub_resource type="DynamicFont" id=5]
 size = 40
 font_data = ExtResource( 1 )
 
+[sub_resource type="StyleBoxEmpty" id=6]
+
 [sub_resource type="DynamicFont" id=3]
 size = 40
 font_data = ExtResource( 1 )
 
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.152941, 0.172549, 0.2, 1 )
+
 [sub_resource type="DynamicFont" id=4]
 size = 40
 font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.152941, 0.172549, 0.2, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [resource]
 Button/colors/font_color = Color( 0.972549, 0.972549, 1, 1 )
 Button/colors/font_color_disabled = Color( 0.901961, 0.901961, 0.901961, 0 )
 Button/colors/font_color_hover = Color( 0.972549, 0.972549, 1, 1 )
 Button/fonts/font = SubResource( 5 )
-Button/styles/disabled = ExtResource( 3 )
-Button/styles/hover = ExtResource( 2 )
-Button/styles/normal = ExtResource( 2 )
-Button/styles/pressed = ExtResource( 3 )
+Button/styles/disabled = ExtResource( 2 )
+Button/styles/focus = SubResource( 6 )
+Button/styles/hover = ExtResource( 3 )
+Button/styles/normal = ExtResource( 3 )
+Button/styles/pressed = ExtResource( 4 )
 Label/fonts/font = SubResource( 3 )
-Label/styles/normal = ExtResource( 2 )
+Label/styles/normal = SubResource( 8 )
 LineEdit/fonts/font = SubResource( 4 )
-LineEdit/styles/focus = ExtResource( 3 )
-LineEdit/styles/normal = ExtResource( 3 )
-WindowDialog/styles/panel = ExtResource( 2 )
+LineEdit/styles/focus = null
+LineEdit/styles/normal = null
+WindowDialog/styles/panel = SubResource( 7 )

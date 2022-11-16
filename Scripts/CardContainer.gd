@@ -29,7 +29,8 @@ func fetch_and_save_all_data(save_name : String):
 		cards_dict[card_name + str(card_count)] = {
 			"ex" : card.get_exercice(),
 			"rep": card.get_rep(),
-			"weight": card.get_weight()
+			"weight": card.get_weight(),
+			"time":0
 		}
 		card_count += 1
 
